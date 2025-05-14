@@ -5,6 +5,20 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Home - Vincent Carlos Portfolio</title>
 
+    <meta name="description" content="Portfolio of Vincent Carlos - Data Analyst, Programmer, Web Developer, Game Developer. Explore projects, resume, and contact information." />
+    <meta name="keywords" content="Vincent Carlos, Portfolio, Data Analyst, Programmer, Web Developer, Game Developer, Resume, Projects" />
+    <meta name="author" content="Vincent Carlos" />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:title" content="Vincent Carlos Portfolio" />
+    <meta property="og:description" content="Portfolio of Vincent Carlos - Data Analyst, Programmer, Web Developer, Game Developer." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://yourwebsite.com/index.html" />
+    <meta property="og:image" content="assets/img/logo.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Vincent Carlos Portfolio" />
+    <meta name="twitter:description" content="Portfolio of Vincent Carlos - Data Analyst, Programmer, Web Developer, Game Developer." />
+    <meta name="twitter:image" content="assets/img/logo.png" />
+
     <!-- Favicons -->
     <link href="assets/img/logo.png" rel="icon" />
     <link href="assets/img/logo.png" rel="touch-icon" />
@@ -35,6 +49,7 @@
 
     <!-- Main CSS File -->
     <link href="assets/css/main.css" rel="stylesheet" />
+    <link href="assets/css/focus-styles.css" rel="stylesheet" />
 
     <!-- Particles.js CSS -->
     <style>
@@ -60,9 +75,11 @@
   </head>
 
   <body class="index-page">
+    <a href="#main-content" class="skip-to-content-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;">Skip to main content</a>
     <header
       id="header"
       class="header d-flex align-items-center light-background sticky-top"
+      role="banner"
     >
       <div
         class="container-fluid position-relative d-flex align-items-center justify-content-between"
@@ -74,15 +91,15 @@
           <h1 class="sitename">Carlos</h1>
         </a>
 
-        <nav id="navmenu" class="navmenu">
+        <nav id="navmenu" class="navmenu" role="navigation" aria-label="Primary Navigation">
           <ul>
-            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="index.html" class="active" aria-current="page">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="resume.html">Resume</a></li>
             <li><a href="portfolio.html">Portfolio</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
-          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+          <button class="mobile-nav-toggle d-xl-none bi bi-list" aria-controls="navmenu" aria-expanded="false" aria-label="Toggle navigation menu"></button>
         </nav>
       </div>
     </header>
@@ -90,7 +107,7 @@
     <main class="main">
       <section id="hero" class="hero section">
         <div id="particles-js"></div>
-        <img src="assets/img/hero-bg.jpg" alt="" data-aos="fade-in" />
+          <img src="assets/img/hero-bg.jpg" alt="Hero Background" loading="lazy" data-aos="fade-in" />
         <div
           class="container text-center"
           data-aos="zoom-out"

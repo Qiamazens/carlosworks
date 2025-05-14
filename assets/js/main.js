@@ -1,8 +1,12 @@
+/**
+ * Main JavaScript for website interactions and UI features
+ */
 (function () {
   "use strict";
 
   /**
    * Apply .scrolled class to the body as the page is scrolled down
+   * This changes header styles on scroll
    */
   function toggleScrolled() {
     const selectBody = document.querySelector("body");
@@ -18,6 +22,9 @@
       : selectBody.classList.remove("scrolled");
   }
 
+  /**
+   * Initialize typed.js for animated typing effect in hero section
+   */
   document.addEventListener("DOMContentLoaded", () => {
     const typedElement = document.querySelector(".typed");
     if (typedElement) {
@@ -35,19 +42,23 @@
   window.addEventListener("load", toggleScrolled);
 
   /**
-   * Mobile nav toggle
+   * Mobile navigation toggle button functionality
+   * Toggles mobile nav visibility and updates ARIA attributes
    */
   const mobileNavToggleBtn = document.querySelector(".mobile-nav-toggle");
 
   function mobileNavToogle() {
-    document.querySelector("body").classList.toggle("mobile-nav-active");
+    const body = document.querySelector("body");
+    const expanded = mobileNavToggleBtn.getAttribute("aria-expanded") === "true";
+    body.classList.toggle("mobile-nav-active");
     mobileNavToggleBtn.classList.toggle("bi-list");
     mobileNavToggleBtn.classList.toggle("bi-x");
+    mobileNavToggleBtn.setAttribute("aria-expanded", String(!expanded));
   }
   mobileNavToggleBtn.addEventListener("click", mobileNavToogle);
 
   /**
-   * Hide mobile nav on same-page/hash links
+   * Hide mobile nav when clicking on same-page/hash links
    */
   document.querySelectorAll("#navmenu a").forEach((navmenu) => {
     navmenu.addEventListener("click", () => {
@@ -58,7 +69,7 @@
   });
 
   /**
-   * Toggle mobile nav dropdowns
+   * Toggle mobile nav dropdown menus
    */
   document.querySelectorAll(".navmenu .toggle-dropdown").forEach((navmenu) => {
     navmenu.addEventListener("click", function (e) {
@@ -70,7 +81,7 @@
   });
 
   /**
-   * Preloader
+   * Remove preloader element after page load
    */
   const preloader = document.querySelector("#preloader");
   if (preloader) {
@@ -80,7 +91,7 @@
   }
 
   /**
-   * Scroll top button
+   * Scroll to top button functionality
    */
   let scrollTop = document.querySelector(".scroll-top");
 
@@ -103,7 +114,7 @@
   document.addEventListener("scroll", toggleScrollTop);
 
   /**
-   * Animation on scroll function and init
+   * Initialize AOS (Animate On Scroll) library
    */
   function aosInit() {
     AOS.init({
@@ -116,7 +127,7 @@
   window.addEventListener("load", aosInit);
 
   /**
-   * Animate the skills items on reveal
+   * Animate skills progress bars on reveal using Waypoints
    */
   let skillsAnimation = document.querySelectorAll(".skills-animation");
   skillsAnimation.forEach((item) => {
@@ -133,12 +144,12 @@
   });
 
   /**
-   * Initiate Pure Counter
+   * Initialize PureCounter for animated counters
    */
   new PureCounter();
 
   /**
-   * Init swiper sliders
+   * Initialize Swiper sliders
    */
   function initSwiper() {
     document.querySelectorAll(".init-swiper").forEach(function (swiperElement) {
@@ -157,14 +168,14 @@
   window.addEventListener("load", initSwiper);
 
   /**
-   * Initiate glightbox
+   * Initialize GLightbox for image lightbox functionality
    */
   const glightbox = GLightbox({
     selector: ".glightbox",
   });
 
   /**
-   * Init isotope layout and filters
+   * Initialize Isotope layout and filters for portfolio
    */
   document.querySelectorAll(".isotope-layout").forEach(function (isotopeItem) {
     let layout = isotopeItem.getAttribute("data-layout") ?? "masonry";
