@@ -9,7 +9,7 @@
 
     <!-- Favicons -->
     <link href="../assets/img/logo.png" rel="icon" />
-    <link href="../assets/img/logo.png" rel="touch-icon" />
+    <link href="../assets/img/logo.png" rel="icon" />
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com" rel="preconnect" />
@@ -83,8 +83,8 @@
       <section id="portfolio-details" class="portfolio-details section">
         <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
-          <h2>Portfolio Details</h2>
-          <p>COVID-19 Data Exploration</p>
+          <h2>Pizza Sales Dashboard Analysis</h2>
+          <p>Exploring pizza sales data to uncover actionable business insights using Excel & SQL</p>
         </div>
         <!-- End Section Title -->
 
@@ -110,7 +110,7 @@
 
                 <div class="swiper-wrapper align-items-center">
                   <div class="swiper-slide">
-                    <img src="..\assets\img\SQL\Covid-EDA.jpeg" alt="" />
+                    <img src="..\assets\img\excel\pizzaSales1.png" alt="" />
                   </div>
                 </div>
                 <div class="swiper-pagination"></div>
@@ -125,12 +125,12 @@
               >
                 <h3>Project information</h3>
                 <ul>
-                  <li><strong>Category</strong>: Data Analytics / SQL Project</li>
+                  <li><strong>Category</strong>: Data Analytics / Excel + SQL Project</li>
                   <li><strong>Client</strong>: Personal Project</li>
-                  <li><strong>Project date</strong>: 10 April, 2025</li>
+                  <li><strong>Project date</strong>: 17 May, 2025</li>
                   <li>
                     <strong>Project URL</strong>:
-                    <a href="https://github.com/Qiamazen/PortfolioProjects/blob/main/COVID%20Portfolio%20Project%20-%20Data%20Exploration.sql">github.com/Qiamazen</a>
+                    <a href="https://github.com/Qiamazen/PortfolioProjects/tree/main/PizzaKPI">github.com/Qiamazen</a>
                   </li>
                 </ul>
               </div>
@@ -139,33 +139,29 @@
                 data-aos="fade-up"
                 data-aos-delay="300"
               >
-                <h2>COVID-19 Global Data Exploration Using SQL</h2>
+                <h2>Pizza Sales Performance Analysis Using Excel & SQL</h2>
                 <p>
-                  This project involves in-depth data exploration of the COVID-19 pandemic using raw global data. Using SQL Server, I performed queries to analyze infection rates, death percentages, and population impact across countries and continents.
+                  This project involved analyzing pizza sales data to uncover actionable business insights. Excel was used extensively for data preparation, transformation, and dashboard creation, while SQL was used in parallel to ensure accuracy by cross-validating key metrics such as total revenue, number of orders, and average order value.
                   <br><br>
-                  <strong>Skills & Tools:</strong> SQL Joins, CTEs, Temp Tables, Aggregate Functions, Window Functions, Views, Data Type Conversion
+                  <strong>Skills & Tools:</strong> Excel, SQL, Data Cleaning, Dashboarding, Business Analysis
                   <br><br>
                   <strong>Key Insights:</strong>
                   <ul>
-                    <li>Calculated death percentage based on total cases vs. total deaths per country</li>
-                    <li>Determined infection percentage by comparing total cases against population</li>
-                    <li>Ranked countries by highest infection rate and death count</li>
-                    <li>Analyzed continent-level summaries to identify regions most affected</li>
-                    <li>Summarized global statistics, such as total cases, deaths, and death rate</li>
+                    <li>Cleaned and transformed raw sales data in Excel using Power Query</li>
+                    <li>Verified key metrics using SQL queries to ensure consistency across platforms</li>
+                    <li>Identified peak sales times (Fridays/Saturdays and afternoon/evening hours)</li>
+                    <li>Revealed the top-performing pizza categories and sizes, highlighting the dominance of Classic and Large-size pizzas</li>
+                    <li>Provided business recommendations based on top and bottom-selling products</li>
+                    <li>Built an interactive Excel dashboard with key KPIs like total revenue, orders, and average order value</li>
                   </ul>
-                  <strong>Example Query - Death Percentage in the US:</strong>
-                <pre><code>
-    SELECT 
-      Location, 
-      Date, 
-      Total_Cases, 
-      Total_Deaths, 
-      (Total    Total_Cases)    DeathPercentage
-    FROM Portfoli   CovidDeaths
-    WHERE Loca    '%states%'
-    AND continent IS NOT NULL
-    ORDER BY 1, 2;
-                  </code></pre>
+                  <br><br>
+                  <strong>Example Visuals:</strong>
+                  <ul>
+                    <li>Clustered bar charts for daily/hourly sales trends</li>
+                    <li>Donut charts showing sales breakdown by category and size</li>
+                    <li>Rankings for best and worst-selling pizzas</li>
+                    <li>Timeline slicer for filtering data by time period</li>
+                  </ul>
                 </p>
               </div>
             </div>
@@ -211,7 +207,6 @@
         </div>
       </div>
     </footer>
-
     <!-- Scroll Top -->
     <a
       href="#"
